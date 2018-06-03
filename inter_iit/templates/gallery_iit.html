@@ -1,0 +1,295 @@
+{#{% extends 'base.html' %}#}
+{#{% load embed_video_tags %}#}
+
+{#{% extends "{% static "django-fancybox-develop/example/templates/base.html" %}" %}#}
+{#{% extends request.is_ajax|yesno:"fancybox/base.html,base.html" %}#}
+{% load staticfiles %}
+
+
+{#{% extends request.is_ajax|yesno:"fancybox/gallery_.html,base.html" %}#}
+
+<!DOCTYPE html>
+<html xmlns:https="http://www.w3.org/1999/xhtml">
+  <head>
+
+      <!-- CSS file -->
+{#<link rel="stylesheet" href="path/to/photoswipe.css">#}
+{#<link rel="stylesheet" href="path/to/default-skin/default-skin.css">#}
+
+<!-- JS file -->
+{#<script src="path/to/jquery.js"></script>#}
+<script src="{% static "jquery.photoswipe-master/dist/min/jquery.photoswipe-global.js"  %}"></script>
+
+
+      <script>
+          $.fancybox({
+            'type':'image'
+        });
+      </script>
+
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="jquery-3.3.1.min.js"></script>
+{#        <script type="text/javascript">#}
+{#$(document).ready(function() {#}
+{#$(".fancybox").fancybox({#}
+{#});#}
+{#});#}
+{#</script>#}
+
+{#      <script src="{% static 'fancy-box.js' %}"></script>#}
+{#      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>#}
+
+      <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <link rel="stylesheet" href="{% static "fancy-box/source/jquery.fancybox.css" %}" type="text/css" media="screen" />
+      <script type="text/javascript" src="{% static "fancy-box/source/jquery.fancybox.pack.js" %}"></script>
+
+
+
+
+
+
+      <script>
+$(function() {
+		$('.pop').on('click', function() {
+			$('.imagepreview').attr('src', $(this).find('img').attr('src'));
+			$('#imagemodal').modal('show');
+		});
+});
+      </script>
+       <script type="text/javascript" src="http://jquery.com/src/jquery-latest.js"></script>
+      <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+      <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+      <script type = "text/javascript" language = "javascript">
+         $(document).ready(function() {
+
+            $("#show").click(function () {
+               $(".class1").fadeIn();
+               $(".class2").fadeOut();
+               {#$(".class3").slideUp(3000);#}
+               {#$(".class3").slideDown(3000);#}
+               {#window.scrollTo(0,680);#}
+
+            });
+
+            $("#hide").click(function () {
+                $(".class1").hide(1000);
+                $(".class2").show(1000);
+
+
+               {#window.scrollTo(0,680);#}
+            });
+
+         });
+         </script>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+          <script type = "text/javascript src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+     </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+{#      <script>#}
+{#          function getId(url) {#}
+{#    var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;#}
+{#    var match = url.match(regExp);#}
+{##}
+{#    if (match && match[2].length == 11) {#}
+{#        return match[2];#}
+{#    } else {#}
+{#        return 'error';#}
+{#    }#}
+{#}#}
+{##}
+{#var videoId = getId('http://www.youtube.com/watch?v=zbYf5_S7oJo');#}
+{##}
+{#var iframeMarkup = '<iframe width="560" height="315" src="//www.youtube.com/embed/'#}
+{#    + videoId + '" frameborder="0" allowfullscreen></iframe>';#}
+{#      </script>#}
+
+         <script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+</script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+{#        <script>#}
+{#            function call_counter(url, pk) {#}
+{#                window.open(url);#}
+{#                $.get('YOUR_VIEW_HERE/'+pk+'/', function (data) {#}
+{#                    alert("counter updated!");#}
+{#                });#}
+{#            }#}
+{#        </script>#}
+      <link rel="stylesheet" href="{% static "assets/css/main.css" %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'imageStyle.css' %}" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, IE=edge,chrome=1">
+    <title>INTER IIT</title>
+
+
+  </head>
+
+  <body>
+
+
+
+
+
+{#  {% video my_video query="rel=0&wmode=transparent" is_secure=True as my_video %}#}
+{#    {{ my_video.url }} {# always with https #}
+{#{% endvideo %}#}
+
+{#{% video item.video 'small' %}#}
+
+
+{#{% for obj in embeded %}#}
+{#<video src="{{ obj.video }}" ></video>#}
+
+{#{% video my_video '800x600' %}#}
+
+{% block content %}
+                            <div class="class3">
+    						<section id="banner">
+							<div class="inner">
+
+								<h1>53RD INTER IIT SPORTS MEET</h1>
+
+{#								<p>A fully responsive gallery template by <a href="https://templated.co">TEMPLATED</a></p>#}
+
+								<ul class="actions">
+{#									<li><a href="#galleries" class="button alt scrolly big">Continue</a></li>#}
+
+                                       <button class="button alt scrolly big" id="show"  style="margin-left: 100px">
+            IMAGES
+        </button>
+
+       <button class="button alt scrolly big" id="hide" style="margin-left: 100px">
+            VIDEOS
+        </button>
+								</ul>
+							</div>
+						</section>
+    </div>
+
+
+{#  <ul>#}
+{#    <li>#}
+{#      <a href="{% url 'simple_upload' %}">Simple Upload</a>#}
+{#    </li>#}
+{#    <li>#}
+{#      <a href="{% url 'model_form_upload_image' %}">Model Form Upload Image</a>#}
+{#    </li>#}
+{#  </ul>#}
+
+
+
+<div class="whole">
+<div class="class1">
+    <div class="row">
+
+    {% for obj in images %}
+{#        {% block content %}#}
+
+
+
+            <div class="container">
+            <div class="column">
+{#            <div class="col-md-4">#}
+{#      <div class="thumbnail">#}
+
+{#    <a  href="{{ obj.image.url }}">#}
+{#                <a id="single_image" href="{{ obj.image.url }}/">#}
+
+      <img src="{{ obj.image.url }}" class="image" id="myImg" alt="{{ obj.image.name }}">
+{#        <p style="margin-left: 100px">{{ obj.image.url }}</p>#}
+
+{#    </a>#}
+            </div>
+
+     <div class="overlay">{{ obj.description }}</div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+      <!-- The Modal -->
+{#<div id="myModal" class="modal">#}
+
+  <!-- The Close Button -->
+{#  <span class="close">&times;</span>#}
+
+  <!-- Modal Content (The Image) -->
+{#  <img class="modal-content" id="img01">#}
+
+  <!-- Modal Caption (Image Text) -->
+{#  <div id="caption"></div>#}
+
+{#  <div id="myModal" class="modal">#}
+{#  <span class="close">&times;</span>#}
+{#  <img class="modal-content" id="img01">#}
+{#  <div id="caption"></div>#}
+{#</div>#}
+
+
+
+
+{% endfor %}
+
+    </div>
+</div>
+
+
+
+
+
+
+
+{#<iframe width="560" height="315" src="https://www.youtube.com/embed/_URnj0Tin-s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>#}
+
+<div class="class2">
+{% for obj in videos %}
+{#    <p>{{ obj.video }}</p>#}
+
+    <iframe width="560" height="315" src="{{ obj.video }}" frameborder="0" id="myVideo" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+    {% endfor %}
+</div>
+    </div>
+
+
+{% endblock %}
+
+
+
+  </body>
+</html>
